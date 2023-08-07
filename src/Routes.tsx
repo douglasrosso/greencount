@@ -1,7 +1,6 @@
-import { BrowserRouter, Navigate, Outlet, Route } from "react-router-dom";
-import { Home } from "./components/pages/Home";
-import { Header } from "./components/organisms/Header";
-import { Footer } from "./components/organisms/Footer";
+import { BrowserRouter, Navigate, Outlet, Route, Routes as Switch } from "react-router-dom";
+import { Home } from "./common/components/pages/Home";
+import { Login } from "./common/components/pages/Login";
 
 export type Rota = {
   path: string;
@@ -13,36 +12,40 @@ const rotas: Rota[] = [
     path: "/",
     element: Home,
   },
+  {
+    path: "/login",
+    element: Login,
+  },
 ];
 
 function construirRotas(): JSX.Element[] {
-  return rotas.map((rota) => {
-    return (
-      <Route
-        index={rota.path === "/" ? true : false}
-        key={rota.path}
-        path={rota.path}
-        element={rota.element()}
-      />
-    );
-  });
+  return rotas.map(rota => (
+    <Route
+      index={rota.path === "/" ? true : false}
+      key={rota.path}
+      path={rota.path}
+      element={<rota.element />}
+    />
+  ));
 }
 
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Route
-        path="/"
-        element={
-          <div>
-            <Header />
-            <Outlet />
-            <Footer />
-          </div>
-        }
-      />
-      {construirRotas()}
-      <Route path="*" element={<Navigate to="/" />} />
+      <Switch>
+        <Route
+          path="/"
+          element={
+            <>
+              {/* <Header /> */}
+              <Outlet />
+              {/* <Footer /> */}
+            </>
+          }>
+          {construirRotas()}
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Switch>
     </BrowserRouter>
   );
 };
