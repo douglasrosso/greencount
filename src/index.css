@@ -14,7 +14,8 @@ body {
 
 #root {
   height: 100vh;
-  background-color: #A4BE7B
+  background: #4a6df5;
+  background: linear-gradient(-90deg, #4a6df5 0%, #3d9cdd 33%, #00d4ff 100%);
 }
 
 code {

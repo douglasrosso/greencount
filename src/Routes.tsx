@@ -1,6 +1,8 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes as Switch } from "react-router-dom";
 import { Home } from "./common/components/pages/Home";
 import { Login } from "./common/components/pages/Login";
+import { Header } from "./common/components/organisms/Header";
+import { Footer } from "./common/components/organisms/Footer";
 
 export type Rota = {
   path: string;
@@ -9,11 +11,11 @@ export type Rota = {
 
 const rotas: Rota[] = [
   {
-    path: "/",
+    path: "/home",
     element: Home,
   },
   {
-    path: "/login",
+    path: "/",
     element: Login,
   },
 ];
@@ -37,9 +39,9 @@ const Routes = () => {
           path="/"
           element={
             <>
-              {/* <Header /> */}
+              <Header />
               <Outlet />
-              {/* <Footer /> */}
+              <Footer />
             </>
           }>
           {construirRotas()}

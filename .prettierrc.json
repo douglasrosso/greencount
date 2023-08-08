@@ -1,0 +1,10 @@
+{
+   "semi": true,
+   "singleQuote": false,
+   "arrowParens": "avoid",
+   "tabWidth": 2,
+   "bracketSameLine": true,
+   "bracketSpacing": true,
+   "editorconfig": false,
+   "htmlWhitespaceSensitivity": "css"
+}
