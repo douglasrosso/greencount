@@ -7,8 +7,9 @@ export const LoginTemplate = () => {
 
   const CapturarEstado = (setParametro: (value: string) => void) => {
     return (event: ChangeEvent<HTMLInputElement>) => setParametro(event.target.value);
-    console.log(email, senha);
   };
+  
+  const user = { email, senha };
 
   return (
     <S.Login>
@@ -23,7 +24,7 @@ export const LoginTemplate = () => {
           <S.TextField name="email" type="text" onChange={CapturarEstado(setEmail)} />
           <label htmlFor="senha">Senha</label>
           <S.TextField name="senha" type="password" onChange={CapturarEstado(setSenha)} />
-          <S.FloatingButton>Sign in</S.FloatingButton>
+          <S.FloatingButton onClick={() => console.log(user)}>Sign in</S.FloatingButton>
         </section>
       </S.Formulario>
     </S.Login >
