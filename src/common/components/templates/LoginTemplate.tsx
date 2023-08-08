@@ -7,6 +7,7 @@ export const LoginTemplate = () => {
 
   const CapturarEstado = (setParametro: (value: string) => void) => {
     return (event: ChangeEvent<HTMLInputElement>) => setParametro(event.target.value);
+    console.log(email, senha);
   };
 
   return (
