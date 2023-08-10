@@ -2,7 +2,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes as Switch } from "react-
 import { Home } from "./common/components/pages/Home";
 import { Login } from "./common/components/pages/Login";
 import { Header } from "./common/components/organisms/Header";
-//import { Footer } from "./common/components/organisms/Footer";
+// import { Footer } from "./common/components/organisms/Footer";
 
 export type Rota = {
   path: string;
