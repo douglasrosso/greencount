@@ -1,16 +1,16 @@
-import { AttachMoney, VerticalAlignBottom, VerticalAlignTop } from "@mui/icons-material";
+
 import * as S from "./HomeTemplateStyles";
+import { Tabela } from "../molecules/Tabela";
+import { PainelInfo } from "../molecules/PainelInfo";
+import { AddButton } from "../atoms/AddButton";
 
 export const HomeTemplate = () => {
   return (
     <S.Home>
       <main>
-        <h1>Controle Financeiro</h1>
-        <section>
-          <button><span>Entradas</span><h2>R$ 435</h2><VerticalAlignTop /></button>
-          <button><span>Saídas</span><h2>R$ - 435</h2><VerticalAlignBottom /></button>
-          <button><span>Total</span><h2>R$ 435</h2><AttachMoney /></button>
-        </section>
+        <PainelInfo />
+        <Tabela />
+        <AddButton />
       </main>
     </S.Home>
   );

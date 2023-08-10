@@ -8,30 +8,34 @@ export const Header = () => {
     return () => mudaSelecao(indice);
   };
 
+  const CondicionalAtivo = (indice: number) => {
+    return selecionado === indice ? 1 : 0;
+  };
+
   return (
     <S.Header>
       <S.Nav>
         <ul>
           <S.ListItem
-            ativo={selecionado === 0}
+            ativo={CondicionalAtivo(0)}
             onClick={SelecionaIndice(0)}
           >
             Dashboard
           </S.ListItem>
           <S.ListItem
-            ativo={selecionado === 1}
+            ativo={CondicionalAtivo(1)}
             onClick={SelecionaIndice(1)}
           >
             Sobre
           </S.ListItem>
           <S.ListItem
-            ativo={selecionado === 2}
+            ativo={CondicionalAtivo(2)}
             onClick={SelecionaIndice(2)}
           >
             Contato
           </S.ListItem>
           <S.ListItem
-            ativo={selecionado === 3}
+            ativo={CondicionalAtivo(3)}
             onClick={SelecionaIndice(3)}
           >
             Dados cadastrais

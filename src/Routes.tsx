@@ -31,6 +31,8 @@ function construirRotas(): JSX.Element[] {
   ));
 }
 
+const logado = location.pathname != "/";
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -39,9 +41,9 @@ const Routes = () => {
           path="/"
           element={
             <>
-              <Header />
+              {logado && <Header />}
               <Outlet />
-              <Footer />
+              {/* logado && < Footer /> */}
             </>
           }>
           {construirRotas()}

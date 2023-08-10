@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Header = styled.header`
    height: 15%;
@@ -33,21 +33,21 @@ button {
 }
 `;
 
-export const ListItem = styled.li<{ ativo?: boolean }>`
+export const ListItem = styled.li<{ ativo?: number }>`
 
-    list-style: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
 
-    &:hover {
+  &:hover {
     transform: scale(1.1);
     transition: all 0.2s;
   }
 
   ${props =>
-    props.ativo && `
-    color: red;
+    props.ativo && css`
+      color: red;
     `}
  
 `;
