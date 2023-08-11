@@ -1,8 +1,5 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes as Switch } from "react-router-dom";
-import { Home } from "./common/components/pages/Home";
-import { Login } from "./common/components/pages/Login";
-import { Header } from "./common/components/organisms/Header";
-// import { Footer } from "./common/components/organisms/Footer";
+import { Sobre, Login, Home, Header, Footer, Contato } from "@components";
 
 export type Rota = {
   path: string;
@@ -10,6 +7,14 @@ export type Rota = {
 };
 
 const rotas: Rota[] = [
+  {
+    path: "/contato",
+    element: Contato,
+  },
+  {
+    path: "/sobre",
+    element: Sobre,
+  },
   {
     path: "/home",
     element: Home,

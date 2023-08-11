@@ -1,5 +1,5 @@
 import * as S from "./HeaderStyles";
-import { useSelection } from "../../utils/SelectionContext";
+import { useSelection } from "@utils";
 
 export const Header = () => {
   const { selecionado, mudaSelecao } = useSelection();
@@ -16,25 +16,25 @@ export const Header = () => {
     <S.Header>
       <S.Nav>
         <ul>
-          <S.ListItem
+          <S.ListItem to="/home" 
             ativo={CondicionalAtivo(0)}
             onClick={SelecionaIndice(0)}
           >
             Dashboard
           </S.ListItem>
-          <S.ListItem
+          <S.ListItem to="/sobre"
             ativo={CondicionalAtivo(1)}
             onClick={SelecionaIndice(1)}
           >
             Sobre
           </S.ListItem>
-          <S.ListItem
+          <S.ListItem to="/contato"
             ativo={CondicionalAtivo(2)}
             onClick={SelecionaIndice(2)}
           >
             Contato
           </S.ListItem>
-          <S.ListItem
+          <S.ListItem to="#"
             ativo={CondicionalAtivo(3)}
             onClick={SelecionaIndice(3)}
           >

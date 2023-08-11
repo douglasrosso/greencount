@@ -2,24 +2,66 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "baseUrl": "./",
+    "paths": {
+      "@types": [
+        "./src/common/types"
+      ],
+      "@contexts": [
+        "./src/common/contexts"
+      ],
+      "@components": [
+        "./src/common/components"
+      ],
+      "@components/*": [
+        "./src/common/components/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@interfaces": [
+        "./src/common/interfaces"
+      ],
+      "@utils": [
+        "./src/common/utils"
+      ],
+      "@theme": [
+        "./src/common/theme"
+      ]
+    },
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "custom.d.ts",
+    "./vite-env.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

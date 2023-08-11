@@ -1,17 +1,15 @@
 
 import * as S from "./HomeTemplateStyles";
-import { Tabela } from "../molecules/Tabela";
-import { PainelInfo } from "../molecules/PainelInfo";
-import { AddButton } from "../atoms/AddButton";
+import { AddButton, Container, PainelInfo, Tabela } from "@components";
 
 export const HomeTemplate = () => {
   return (
-    <S.Home>
-      <main>
+    <Container>
+      <S.Home>
         <PainelInfo />
         <Tabela />
         <AddButton />
-      </main>
-    </S.Home>
+      </S.Home>
+    </Container>
   );
 };

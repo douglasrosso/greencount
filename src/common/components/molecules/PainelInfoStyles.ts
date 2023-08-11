@@ -21,7 +21,7 @@ export const PainelInfo = styled.article`
       width: 30%;
       height: 110px;
       padding: 20px;
-      border: 2px solid #c4c4c4c4;
+      border: 1px solid #c4c4c4c4;
       border-radius: 5px;
       background-color: unset;
       display: flex;

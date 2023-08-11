@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import rota from "../../assets/background-sky.jpg";
+import rota from "../../assets/background_sky.jpg";
 
 export const Login = styled.article`
 background-color: white; 
