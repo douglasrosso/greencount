@@ -10,7 +10,7 @@ export const Contato = styled.main`
     text-align: center;
   }
   h1 {
-    color: rgba(0, 212, 255);
+    color: rgb(0, 212, 255);
     font-size: 30px;
   }
   svg {

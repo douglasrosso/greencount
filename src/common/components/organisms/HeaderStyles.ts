@@ -48,6 +48,6 @@ export const ListItem = styled(Link)<{ ativo?: number }>`
   ${props =>
     props.ativo &&
     css`
-      color: red;
+      color:  rgb(0, 212, 255);
     `}
 `;

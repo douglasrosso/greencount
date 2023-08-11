@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AddButton = styled.button`
-  background-color: #e90000;
+  background-color: rgb(0, 212, 255);
   height: 70px;
   width: 70px;
   border-radius: 50px;
@@ -19,7 +19,7 @@ export const AddButton = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: all 0.3s;
-    background-color: #fe0000;
+    background-color: rgba(0, 212, 255, 0.8);
   }
 
   svg {
